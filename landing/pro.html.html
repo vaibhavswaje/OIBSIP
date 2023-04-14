@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>html Editor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+</head>
+
+<body>
+
+
+
+
+    <section class="header" >
+        
+        <style>
+            .header {
+                background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(internship.avif);
+                width: 100%;
+                min-height: 100vh;
+                background-position: center;
+                background-size: cover;
+                position:relative ;
+
+            }
+            .nav {            
+            display: flex;
+                padding: 2% 6%;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .nav img {
+          width: 150px;
+            }
+            .nav-links {
+                flex: 1;
+                text-align: right;
+            
+               flex-wrap: wrap;
+                
+            }
+            .nav-links ul li {
+                list-style: none;
+                display: inline-block;
+                padding: 8px 12px;
+                position: relative;
+
+            }
+            .nav-links ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 13px;
+            }
+            .nav-links ul li :after {
+                content: '';
+                width: 0%;
+                height: 2px;
+                background: #f44336;
+                display: block;
+                margin: auto;
+                transition: 0. 5s;         
+            }
+            .nav-links ul li :hover::after {
+                width: 100%;
+            }
+            .text-box {
+                width: 90%;
+                color: crimson;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .text-box h1 {
+                font-size: 15px;
+
+            }
+
+            .text-box p {
+                margin: 10px 0 40px;
+                font-size: 20px;
+                color: white;
+            }
+
+            .hero-btn {
+                display: inline-block;
+                text-decoration: none;
+                color: white;
+                border: 1px solid#fff;
+                padding: 12px 34px;
+                font-size: 13px;
+                background: transparent;
+                position: relative;
+                cursor: pointer;
+                border-radius: 14px;
+        
+            }
+
+            .hero-btn:hover {
+                border: 1px solid#fff;
+                background: #f44336;
+                transition: 0.5s;
+                box-shadow: 5px 5px 25px 0px #f44336;
+            }
+            
+        </style>
+        <nav style="border: 2px lightblue" >
+     <a href="" style="size: 10%" ><img src="data:image/jpeg;base64,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"></a>
+          
+            <div class="nav-links " id="navlink" >
+                
+                <ul style="font-size: 5px;color:#742222">
+                    <li><a href="pro.html.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="blog.html">history</a></li>
+                    <li><a href="contac.html">contact </a></li>
+                    <li><a href="accou.html.html">gallary </a></li>
+                    <li><a href="course.html">course </a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="text-box" ->
+
+
+
+            <h1 style="color: chocolate;text-transform: uppercase; margin: 0 auto 0 auto;">Welcome to Oasis Infobyte </h1>
+
+
+
+            <p></p>
+            <a href="" class="hero-btn">Internship</a>
+    </section>
+    <section class="course" style="margin-bottom: 100Px;">
+
+        <style>
+            .course {
+                width: 80%;
+                margin: auto;
+                text-align: center;
+                padding-top: 100px;
+
+            }
+
+            .course h5 {
+                font-size: 40px;
+
+            }
+
+            .course p1 {
+
+                color: fff;
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 22px;
+                padding: 10px;
+
+            }
+
+            .row {
+                margin-top: 5%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .course-col {
+                flex-basis: 31%;
+                background: #fff3f3;
+                border-radius: 10px;
+                margin-bottom: 5px;
+                padding: 20px 12px;
+                box-sizing: border-box;
+                transition: 0.5s;
+
+            }
+
+            .h3 {
+                text-align: center;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+
+            .course-course-col:hover {
+                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0);
+
+
+            }
+        </style>
+
+       <a href="call.html"> <h5>Internship Domain</h5></a>
+        <p1>our organization offers internship in may domian for needy student<br> absolutly free</p1>
+
+        <div class="row">
+            <div class="course-col">
+                <h3>Web-dev</h3>
+                <p2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti tenetur iure neque necessitatibus suscipit? Dolorem deserunt voluptas recusandae magni vitae veniam, dolor officiis blanditiis labore accusamus ipsum neque tempore saepe.</p2>
+            </div>
+
+            <div class="course-col">
+                <h3>Java-dev</h3>
+                <p2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere aspernatur aut nulla! Ipsa, iure dolor commodi sapiente veritatis nostrum illo veniam neque porro quis praesentium nisi eum similique optio.</p2>
+            </div>
+
+
+            <div class="course-col">
+                <h3>Android-dev</h3>
+                <p2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat porro, provident magni sint ad voluptates deserunt voluptas ab soluta repellendus quam eaque vero! Delectus ea perferendis qui autem necessitatibus culpa!</p2>
+            </div>
+
+        </div>
+
+    </section>
+    <div>by vaibhav </div>
+
+</body>
+
+</html>
